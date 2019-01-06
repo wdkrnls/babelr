@@ -1,0 +1,37 @@
+---
+title: "BabelR"
+output: github_document
+---
+
+This package provides some tools to ease the inclusion of chemical structures into `Rmarkdown` documents.
+
+It is distributed in the hopes it will be useful following the GNU GPL3+ license.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Quick Start
+
+```{r eval=FALSE}
+remotes::install_github("wdkrnls/babelr")
+```
+
+```{r nicotine, fig.width=4, fig.height=4}
+library(babelr)
+nic_sdf = file.path(system.file(package = "babelr"), 
+                    "extdata", "nicotine.sdf")
+out = ob_render(nic_sdf)
+nic = grImport2::readPicture(out$created)
+nicgrob = grImport2::pictureGrob(nic)
+fp = frame_picture(nicgrob, title = "Nicotine")
+
+fp
+```
+
+Multiple pictures can be plotted into a grid.
+
+```{r gridded, fig.width=8, fig.height=8}
+combine_frames(list(fp, fp, fp, fp))
+```
+
