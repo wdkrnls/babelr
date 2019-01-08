@@ -32,6 +32,15 @@ fp
 Multiple pictures can be plotted into a grid.
 
 ```{r gridded, fig.width=8, fig.height=8}
-combine_frames(list(fp, fp, fp, fp), background_fill = c("red", "orange", "yellow", "green"))
+combine_frames(list(fp, fp, fp, fp), 
+               background_fill = c("red", "orange", "yellow", "green"))
+```
+
+It is also possible to override the layout.
+
+```{r fig.width=12, fig.height=3}
+combine_frames(list(fp, fp, fp, fp), 
+               background_fill = c("red", "orange", "yellow", "green"),
+               facet_layout = c(1, 4))
 ```
 
