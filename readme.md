@@ -20,7 +20,7 @@ nic_sdf = file.path(system.file(package = "babelr"),
 out = ob_render(nic_sdf)
 ```
 
-    ## '/tmp/Rtmp55XAei/nicotine.svg' (SVG) was converted to '/tmp/Rtmp55XAei/nicotine-grid.svg' (Cairo SVG)
+    ## '/tmp/RtmpDP1dFm/nicotine.svg' (SVG) was converted to '/tmp/RtmpDP1dFm/nicotine-grid.svg' (Cairo SVG)
 
 ``` r
 nic = grImport2::readPicture(out$created)

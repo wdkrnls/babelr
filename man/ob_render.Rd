@@ -2,7 +2,8 @@
 % Please edit documentation in R/cli.R
 \name{ob_render}
 \alias{ob_render}
-\title{Some documentation}
+\title{A utility to render sdf files into Cairo SVG images so they can
+be imported into R.}
 \usage{
 ob_render(filename, cmd = "obabel", output = tempdir(),
   extra = "-d -xC -xm -xj -xt -xd -xb none")
@@ -17,5 +18,6 @@ ob_render(filename, cmd = "obabel", output = tempdir(),
 \item{extra}{Character(1) arguments to format the SVG images.}
 }
 \description{
-Some documentation
+A utility to render sdf files into Cairo SVG images so they can
+be imported into R.
 }
