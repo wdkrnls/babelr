@@ -20,7 +20,7 @@ nic_sdf = file.path(system.file(package = "babelr"),
 out = ob_render(nic_sdf)
 ```
 
-    ## '/tmp/Rtmpv6UeBU/nicotine.svg' (SVG) was converted to '/tmp/Rtmpv6UeBU/nicotine-grid.svg' (Cairo SVG)
+    ## '/tmp/Rtmp55XAei/nicotine.svg' (SVG) was converted to '/tmp/Rtmp55XAei/nicotine-grid.svg' (Cairo SVG)
 
 ``` r
 nic = grImport2::readPicture(out$created)
@@ -35,7 +35,18 @@ fp
 Multiple pictures can be plotted into a grid.
 
 ``` r
-combine_frames(list(fp, fp, fp, fp))
+combine_frames(list(fp, fp, fp, fp), 
+               background_fill = c("red", "orange", "yellow", "green"))
 ```
 
 ![](readme_files/figure-gfm/gridded-1.png)<!-- -->
+
+It is also possible to override the layout.
+
+``` r
+combine_frames(list(fp, fp, fp, fp), 
+               background_fill = c("red", "orange", "yellow", "green"),
+               facet_layout = c(1, 4))
+```
+
+![](readme_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->

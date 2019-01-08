@@ -4,12 +4,17 @@
 \alias{combine_frames}
 \title{Combine multiple frames together}
 \usage{
-combine_frames(fs, ...)
+combine_frames(fs, ..., background_fill = NULL,
+  foreground_color = NULL, facet_layout = n2mfrow(n))
 }
 \arguments{
 \item{fs}{List-Of(Frames).}
 
 \item{...}{Extra frames which will get combined.}
+
+\item{background_fill}{Character color of background.}
+
+\item{foreground_color}{Character color of foreground text.}
 }
 \description{
 Combine multiple frames together

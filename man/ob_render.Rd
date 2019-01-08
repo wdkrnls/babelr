@@ -4,7 +4,7 @@
 \alias{ob_render}
 \title{Some documentation}
 \usage{
-ob_render(filename, cmd = "/usr/bin/obabel", output = tempdir(),
+ob_render(filename, cmd = "obabel", output = tempdir(),
   extra = "-d -xC -xm -xj -xt -xd -xb none")
 }
 \arguments{

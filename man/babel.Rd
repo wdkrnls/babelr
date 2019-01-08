@@ -4,7 +4,7 @@
 \alias{babel}
 \title{Interface to babel command-line utility}
 \usage{
-babel(..., cmd = "/usr/bin/obabel")
+babel(..., cmd = "obabel")
 }
 \description{
 Interface to babel command-line utility

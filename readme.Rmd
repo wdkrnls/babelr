@@ -32,6 +32,6 @@ fp
 Multiple pictures can be plotted into a grid.
 
 ```{r gridded, fig.width=8, fig.height=8}
-combine_frames(list(fp, fp, fp, fp))
+combine_frames(list(fp, fp, fp, fp), background_fill = c("red", "orange", "yellow", "green"))
 ```
 
